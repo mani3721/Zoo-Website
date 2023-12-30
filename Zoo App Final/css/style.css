@@ -1,0 +1,586 @@
+:root {
+  --green: rgb(114, 184, 5);
+  --yellow: rgb(255, 199, 0);
+  --turquoise: rgb(0, 188, 177);
+  --blue: rgb(0, 171, 225);
+  --purple: rgb(119, 76, 190);
+  --red: rgb(219, 81, 81);
+  --dark-blue: rgb(65, 90, 222);
+  --light-green: rgb(68, 170, 78);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  line-height: 1.375;
+  overflow: hidden;
+}
+
+/***********************/
+/* HEADER */
+/***********************/
+
+.header {
+  height: auto;
+}
+
+/****************************/
+/* NAVIGATION */
+/****************************/
+
+.main-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  font-family: "Montserrat", sans-serif;
+  background-color: transparent;
+  z-index: 14;
+}
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  padding: 0 3.125%;
+  height: 100%;
+}
+
+.nav-center {
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+}
+.logo {
+  margin-top: -4px;
+}
+.menu-items .main-nav-list {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+}
+.main-nav-list .menu-item-link {
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+.menu-item-link::before {
+  content: "";
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 20px;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #ff7a00;
+}
+.navbar-info-btns {
+  padding: 0 15px;
+  gap: 10px;
+}
+.navbar-info-btns .info-btn {
+  display: flex;
+  text-decoration: none;
+}
+.info-btn {
+  padding: 15px;
+  border-radius: 50%;
+  color: #ff7a00;
+  background-color: #fff;
+}
+.donate-btn {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff7a00;
+  padding: 1rem 2.5rem;
+  border-radius: 20px;
+  font-weight: 700;
+}
+/***********************/
+/* SCROLLBAR COMPONENTS */
+/***********************/
+
+.scroll-container {
+  height: 100vh;
+  overflow: hidden;
+  scrollbar-width: transparent;
+  scrollbar-color: trans;
+}
+
+/***********************/
+/* REUSABLE COMPONENTS */
+/***********************/
+
+.sections {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  scroll-snap-align: start;
+}
+
+.bg-layer {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.btns {
+  display: flex;
+  gap: 25px;
+}
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-decoration: none;
+  padding: 1.3rem 3.5rem;
+  font-size: 1.4rem;
+  border-radius: 30px;
+  font-family: "Montserrat";
+  font-weight: 600;
+}
+.btn--full {
+  background-color: #ff7a00;
+}
+.btn--outline {
+  border: 2px solid #fff;
+  background: transparent;
+  background-color: transparent;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  padding: 0 3.90625%;
+}
+
+.heading-primary {
+  font-size: 4.2rem;
+  font-family: "Lilita One", cursive;
+  color: #fff;
+  line-height: 1.1375;
+  font-weight: 400;
+  margin-bottom: 1rem;
+}
+.description {
+  font-size: 1.575rem;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #fff;
+  margin-bottom: 4.4rem;
+}
+
+.margin-right-sm {
+  margin-right: 1rem;
+}
+/***********************/
+/* HOME SECTION */
+/***********************/
+
+.section-home {
+  background-color: var(--green);
+}
+
+.section-home .heading-primary {
+  line-height: 1.15;
+  margin-bottom: 1.1rem;
+}
+
+.section-home .description {
+  font-size: 1.575rem;
+  margin-bottom: 4.48rem;
+}
+.section-home .bg-layer {
+  justify-content: flex-end;
+}
+.home-text-area {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  z-index: 10;
+  width: 100%;
+}
+.text-box {
+  width: 50%;
+}
+
+.section-figure {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+.section-home .section-img {
+  margin-right: 10px;
+}
+/***********************/
+/* GIRAFFE SECTION */
+/***********************/
+
+.section-giraffe {
+  background-color: var(--yellow);
+}
+
+.section-giraffe .bg-layer {
+  justify-content: flex-start;
+}
+
+.section-giraffe .home-text-area {
+  flex-direction: row-reverse;
+}
+.section-giraffe .section-figure {
+  margin-bottom: 9rem;
+  margin-left: -0.8rem;
+}
+.section-giraffe .text-box {
+  margin-right: -1.5rem;
+}
+
+/***********************/
+/* RHINOCEROS SECTION */
+/***********************/
+
+.section-rhinoceros {
+  background-color: var(--turquoise);
+}
+
+.section-rhinoceros .section-figure {
+  margin-right: -4rem;
+}
+.section-rhinoceros .bg-layer {
+  justify-content: flex-end;
+}
+.section-rhinoceros .text-box {
+  width: 48%;
+}
+/***********************/
+/* ABOUT SECTION */
+/***********************/
+
+.section-about {
+  background-color: var(--blue);
+}
+.section-about .bg-layer {
+  justify-content: flex-end;
+}
+.section-about .heading-primary {
+  font-size: 3.15rem;
+  margin-bottom: 1.7rem;
+}
+.section-about .container {
+  max-width: 119rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section-about .description {
+  font-size: 1.4rem;
+  margin-bottom: 4.41rem;
+}
+
+.section-about .section-figure {
+  margin-right: -3rem;
+}
+.section-about .text-box {
+  width: 52%;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+.icon-size {
+  color: #fff;
+  font-size: 5rem;
+}
+.icon-names {
+  color: #fff;
+  font-size: 1.5rem;
+  line-height: 1.45;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5.5rem;
+}
+.paw-icon {
+  color: #fff;
+  font-size: 4.8rem;
+}
+
+/****************************/
+/* PLAN YOUR VISIT SECTION */
+/****************************/
+
+.section-plan {
+  background-color: var(--purple);
+}
+.section-plan .home-text-area {
+  flex-direction: row-reverse;
+}
+.section-plan .heading-primary {
+  font-size: 3.15rem;
+  margin-bottom: 5.95rem;
+}
+.blob-container {
+  display: flex;
+  width: 610px;
+}
+.blob-box {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 5.5rem;
+}
+.blob {
+  display: flex;
+  flex-direction: column;
+}
+.blob-title {
+  font-size: 1.58rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.135;
+  margin-top: 4.1rem;
+}
+.blob-description {
+  margin-top: 1rem;
+  font-size: 1.38rem;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 500;
+  color: #fff;
+}
+.blob-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+}
+.section-plan .section-figure {
+  margin-left: -7.3rem;
+  margin-bottom: 2.5rem;
+}
+.section-plan .text-box {
+  margin-right: 1rem;
+}
+.section-plan .margin-right-md {
+  padding: 0 2.5rem;
+}
+.margin-right-xl {
+  margin-right: 2.5rem;
+}
+
+/****************************/
+/* CAROUSEL SECTION */
+/****************************/
+.section-carousel {
+  background-color: var(--red);
+}
+
+/****************************/
+/* TICKET PRICES SECTION */
+/****************************/
+
+.section-tickets {
+  background-color: var(--dark-blue);
+}
+.section-tickets .section-figure {
+  width: 16%;
+}
+.section-tickets .text-box {
+  width: 1085px;
+  padding-top: 2.5rem;
+}
+.section-tickets .section-img {
+  margin-left: -7.4rem;
+}
+
+.section-tickets .heading-primary {
+  font-size: 3.15rem;
+  text-align: center;
+}
+.price-title {
+  text-align: center;
+  font-size: 2.63rem;
+  font-weight: 400;
+  line-height: 1.5389;
+  font-family: "Lilita One", cursive;
+}
+.price {
+  display: flex;
+  flex-direction: column;
+  max-width: 270px;
+  border-radius: 5px;
+  background-color: #5870ed;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.12);
+  padding: 1.3rem 2.2rem 3.5rem;
+  color: #fff;
+  margin-top: 4rem;
+}
+.price-list-items {
+  list-style-type: none;
+}
+.price-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1.5rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.price-text {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.4rem;
+  margin-top: 2.8rem;
+}
+
+.section-tickets .btn {
+  padding: 0.9rem 0.9rem;
+}
+.price-btn {
+  margin-top: 3rem;
+}
+.hr-divider {
+  margin-top: 1.5rem;
+  opacity: 0.5;
+}
+.price-cards {
+  display: flex;
+  width: 100%;
+  margin: -0.8rem 0 2.5rem 8.8rem;
+}
+.margin-left-md {
+  margin-left: 9rem;
+}
+.margin-top-md--2 {
+  margin-top: 3.4rem;
+}
+.margin-top-md {
+  margin-top: 3rem;
+}
+.price-card {
+  width: 100%;
+}
+
+/****************************/
+/*  CONTACTS SECTION */
+/****************************/
+
+.section-contact {
+  background-color: var(--light-green);
+}
+.section-contact .container {
+  max-width: 119rem;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.section-contact .heading-primary {
+  font-size: 3.15rem;
+  margin-bottom: 2.5rem;
+}
+
+.section-contact .inputs {
+  display: block;
+  width: 69%;
+  padding: 0.885rem 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.375;
+  color: #fff;
+  background-color: transparent;
+  border: 1px solid #fff;
+  border-radius: 20px;
+  outline: none;
+  font-size: 1.5rem;
+  transition: all 0.15s ease-in-out;
+}
+::placeholder {
+  color: #acccb0;
+}
+.inputs:focus {
+  border: 2px solid #fff;
+}
+.form-inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+textarea {
+  height: 120px;
+}
+.section-contact .btn {
+  padding: 1rem 1.6rem;
+  margin-top: 1rem;
+  width: 28%;
+}
+
+/****************************/
+/*  LEFT NAVIGATION */
+/****************************/
+
+.left-navlink {
+  position: fixed;
+  top: 30%;
+  left: 1.3%;
+  z-index: 10;
+}
+.left-navlink ul li {
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin: 20px 0;
+  /* background-color: #ff7a00; */
+  /* border-radius: 50%; */
+}
+.left-navlink ul li a span {
+  display: block;
+  border-radius: 50%;
+  height: 100%;
+  width: 100%;
+  border: 3px solid #fff;
+  background: transparent;
+}
+
+/****************************/
+/*  COPYRIGHT FOOTER */
+/****************************/
+
+footer {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 14;
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  padding: 1rem 0 1.5rem 0;
+  font-family: Open Sans, sans-serif;
+  font-weight: 400;
+}
